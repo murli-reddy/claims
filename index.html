@@ -15,7 +15,7 @@
 <body>
 <script>
   // Use the /exec link from Deploy > Manage deployments (not the /dev test link)
-  var APP_URL = 'https://script.google.com/a/macros/toothsi.in/s/AKfycbzzgvMSb6jeDENcuweTgGg2gqGz52JJ77gNsh-HVnOQ/dev';
+  var APP_URL = 'https://script.google.com/a/macros/toothsi.in/s/AKfycbxoITve2FDiBlUDfAJL5Fu0c1Qz2TvMzu1h4orpScn7RB-V34IYGYSRLwEGLoOlfNcwBg/exec';
   var d = new URLSearchParams(location.search).get('d') || '';
   if (/^[A-Za-z0-9_-]{6,80}$/.test(d)) {
     var src = APP_URL + '?d=' + encodeURIComponent(d);
