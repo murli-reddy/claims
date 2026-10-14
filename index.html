@@ -1,1 +1,18 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>toothsi claims</title>
+<script>
+  // Your Apps Script web app link (Deploy > Manage deployments)
+  var APP_URL = 'https://script.google.com/a/macros/toothsi.in/s/AKfycbzzgvMSb6jeDENcuweTgGg2gqGz52JJ77gNsh-HVnOQ/dev';
+  var d = new URLSearchParams(location.search).get('d') || '';
+  if (/^[A-Za-z0-9_-]{6,80}$/.test(d)) location.replace(APP_URL + '?d=' + encodeURIComponent(d));
+</script>
+</head>
+<body style="font-family:Arial,sans-serif;color:#555;text-align:center;padding-top:20vh">
+  <p>Opening the claim…</p>
+  <noscript>Turn on JavaScript to open this claim.</noscript>
+</body>
+</html>
