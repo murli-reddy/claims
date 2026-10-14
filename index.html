@@ -4,15 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>toothsi claims</title>
+<style>
+  html,body{margin:0;height:100%;background:#F7FAFC;font-family:Arial,sans-serif}
+  iframe{border:0;width:100%;height:100%;display:block}
+  .msg{color:#555;text-align:center;padding-top:20vh}
+  .fallback{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px}
+  .fallback a{color:#2F8FC4}
+</style>
+</head>
+<body>
 <script>
-  // Your Apps Script web app link (Deploy > Manage deployments)
+  // Use the /exec link from Deploy > Manage deployments (not the /dev test link)
   var APP_URL = 'https://script.google.com/a/macros/toothsi.in/s/AKfycbzzgvMSb6jeDENcuweTgGg2gqGz52JJ77gNsh-HVnOQ/dev';
   var d = new URLSearchParams(location.search).get('d') || '';
-  if (/^[A-Za-z0-9_-]{6,80}$/.test(d)) location.replace(APP_URL + '?d=' + encodeURIComponent(d));
+  if (/^[A-Za-z0-9_-]{6,80}$/.test(d)) {
+    var src = APP_URL + '?d=' + encodeURIComponent(d);
+    document.write('<iframe src="' + src + '" allow="clipboard-write"></iframe>' +
+      '<div class="fallback">Page not loading? <a href="' + src + '" target="_top">Open it directly</a></div>');
+  } else {
+    document.write('<p class="msg">This claim link is incomplete. Use the button in the claim email.</p>');
+  }
 </script>
-</head>
-<body style="font-family:Arial,sans-serif;color:#555;text-align:center;padding-top:20vh">
-  <p>Opening the claim…</p>
-  <noscript>Turn on JavaScript to open this claim.</noscript>
 </body>
 </html>
